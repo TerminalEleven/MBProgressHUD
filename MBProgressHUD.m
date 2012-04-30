@@ -536,6 +536,11 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 		CGGradientRelease(gradient);
 	}
 	
+    // Leo - Create drop shadow.
+    UIColor *color = [[UIColor alloc] initWithRed:0.0 green:0.0 blue:0.0 alpha:0.9];
+    CGContextSetShadowWithColor(context, CGSizeMake(0.0, 0.0), 20.0, [color CGColor]);
+    [color release];
+    
 	// Center HUD
 	CGRect allRect = self.bounds;
 	// Draw rounded HUD bacgroud rect
